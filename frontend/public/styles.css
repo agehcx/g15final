@@ -1,0 +1,146 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+.task-form {
+  margin-bottom: 20px;
+}
+
+#task-input{
+  padding: 10px;
+  font-size: 19px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#start, #end {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.add-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+span {
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.add-button {
+  background-color: #4aaa17;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.add-button:hover {
+  background-color: #eed411;
+}
+
+.containerbar {
+  max-width:  1440px;
+  margin:  0 auto;
+}
+
+nav {
+  background: #817f7f;
+}
+
+.nav-con {
+  justify-content: space-between;
+  align-items: center;
+  height:  100px;
+}
+
+/* @media screen and (max-width: 360px) {
+
+  .logo {
+      margin-bottom: 2rem;
+  }
+
+  .nav-con {
+      padding: 3rem 0;
+      flex-direction: column;
+      height: auto;
+  }
+
+  .menu {
+      text-align: center;
+      flex-direction: column;
+  }
+
+  .menu li {
+      padding: 2rem 0;
+  }
+
+  .menu li:hover {
+      background: #6ac67f;
+  }
+} */
