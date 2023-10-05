@@ -17,16 +17,16 @@ function addTask() {
     li.appendChild(descriptionSpan);
 
     var startTimeSpan = document.createElement('span');
-    startTimeSpan.textContent = 'Start Time: ' + startTime;
+    startTimeSpan.textContent = 'Start :' +startTime;
     li.appendChild(startTimeSpan);
 
     var endTimeSpan = document.createElement('span');
-    endTimeSpan.textContent = 'End Time: ' + endTime;
+    endTimeSpan.textContent = 'End :' + endTime;
     li.appendChild(endTimeSpan);
 
     // Create delete button
     var deleteButton = document.createElement('button');
-    deleteButton.innerHTML = '<button class="renmove">Delete</button>'
+    deleteButton.innerHTML = '<button class="delete">Delete</button>'
     deleteButton.onclick = function() {
         taskList.removeChild(li);
     };

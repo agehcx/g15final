@@ -1,8 +1,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   height: 100vh;
   margin: 0;
   background-color: #f4f4f4;
@@ -76,7 +76,7 @@ li {
   align-items: center;
 }
 
-.delete-button {
+.delete {
   background-color: #f44336;
   color: white;
   border: none;
@@ -86,7 +86,7 @@ li {
   font-size: 14px;
 }
 
-.delete-button:hover {
+.delete:hover {
   background-color: #d32f2f;
 }
 
