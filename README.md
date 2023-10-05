@@ -1,2 +1,2 @@
 # g15final
-f2cedt group 15
+g15 we gon pass (away)
