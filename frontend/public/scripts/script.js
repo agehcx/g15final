@@ -7,6 +7,9 @@ function addTask() {
     if (taskText === '' || startTime == '' || endTime == '') {
         alert("Input cannot be empty!");
         return;
+    } else if(startTime > endTime) {
+        alert("Start time must be less or equal than end time. !");
+        return;
     }
 
     var taskList = document.getElementById('task-list');
@@ -72,9 +75,22 @@ function addTask() {
     task.appendChild(deleteButton);
     taskList.appendChild(task);
 
+    // Sort tasks by Start time
+    var tasksArray = Array.from(taskList.children);
+    tasksArray.sort(function (a, b) {
+        var startTimeA = a.querySelector('#startTimeSpan').textContent.split(' ')[2];
+        var startTimeB = b.querySelector('#startTimeSpan').textContent.split(' ')[2];
+        return startTimeA.localeCompare(startTimeB);
+    });
+
+    // Clear task-list and re append tasks
+    taskList.innerHTML = '';
+    tasksArray.forEach(function (taskElement) {
+        taskList.appendChild(taskElement);
+    });
+
     // Clear the input
     taskInput.value = '';
-    document.getElementById('start').value = '';
-    document.getElementById('end').value = '';
-
+    document.getElementById('start-input').value = '';
+    document.getElementById('end-input').value = '';
 }
