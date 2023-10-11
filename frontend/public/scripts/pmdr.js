@@ -1,6 +1,8 @@
 let timer;
+let onPause = false;
 let isTimerRunning = false;
 let initialTimeInSeconds = 1500;
+let remainingTime = initialTimeInSeconds;
 
 const startButton = document.getElementById('startButton');
 const resetButton = document.getElementById('resetButton');
@@ -14,7 +16,7 @@ function startTimer(durationInSeconds) {
 
     timer = setInterval(function () {
         const currentTime = Date.now();
-        const remainingTime = Math.max(0, endTime - currentTime);
+        remainingTime = Math.max(0, endTime - currentTime);
         updateTimerDisplay(Math.floor(remainingTime / 1000));
 
         if (remainingTime <= 0) {
@@ -22,7 +24,7 @@ function startTimer(durationInSeconds) {
             isTimerRunning = false;
             startButton.innerText = 'Start';
         }
-    }, 1000);
+    }, 500); // If its set to 1000 it skips 24:59 
 }
 
 function updateTimerDisplay(timeInSeconds) {
@@ -39,11 +41,17 @@ function resetTimer() {
 }
 
 startButton.addEventListener('click', function () {
-    if (isTimerRunning) {
+    if (isTimerRunning) { // Pause time
         clearInterval(timer);
+        onPause = true;
         isTimerRunning = false;
-        startButton.innerText = 'Start';
-    } else {
+        startButton.innerText = 'Continue';
+    } else if (onPause) { // Continue
+        startTimer(Math.floor(remainingTime/1000));
+        onPause = false;
+        isTimerRunning = true;
+        startButton.innerText = 'Pause';
+    } else { // Start
         startTimer(1500); // 25 minutes in seconds
         isTimerRunning = true;
         startButton.innerText = 'Pause';
