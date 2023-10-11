@@ -1,5 +1,7 @@
 /*style for main page*/
 
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
@@ -175,8 +177,28 @@ ul {
 }
 
 #member-header {
-  margin-top: 40px;
-  ;
+  margin-top: 50px;
+}
+
+#team-members {
+  margin-top: 25px;
+  position: absolute;
+  left: 425px;
+}
+
+#team-members li {
+  font-weight: 600;
+  font-size: 25px;
+  font-family: 'Prompt';
+}
+
+#members-id {
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 25px;
+  position: absolute;
+  left: 725px;
+  font-family: 'Prompt';
 }
 
 /* @media screen and (max-width: 360px) {
