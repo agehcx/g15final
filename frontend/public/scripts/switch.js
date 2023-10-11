@@ -1,0 +1,25 @@
+const workflowContent = document.getElementById('workflow');
+const memberContent = document.getElementById('member-list');
+
+
+function showWorkflowContent() {
+    workflowContent.style.display = 'block';
+    memberContent.style.display = 'none';
+}
+
+function showMemberContent() {
+    workflowContent.style.display = 'none';
+    memberContent.style.display = 'block';
+}
+
+const workflowMenuItem = document.getElementById('home');
+const memberMenuItem = document.getElementById('about-us');
+
+workflowMenuItem.addEventListener('click', function () {
+    console.log('Workflow menu clicked');
+    showWorkflowContent();
+});
+memberMenuItem.addEventListener('click', function () {
+    console.log('About Us menu clicked');
+    showMemberContent();
+});

@@ -7,17 +7,18 @@
 }
 
 nav {
-    background: #efefef;
-    width: 17%;
+    position: relative;
+    z-index: 2;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 .nav-con {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    position: absolute;
-    top: 26px;
-    left: 10px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -29,7 +30,7 @@ nav {
     display: flex;
     position: absolute;
     bottom: 26px;
-    left: 10px;
+    left: 5px;
 }
 
 .menu li {
@@ -41,7 +42,6 @@ nav {
 a {
     color: #000000;
     text-decoration: dashed;
-    font-weight: normal;
 }
 
 a:hover {
@@ -51,4 +51,32 @@ a:hover {
 .containerbar {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.menu img {
+    height: 25px;
+    width: 25px;
+}
+
+.menu ul {
+    overflow: hidden;
+}
+
+#home-icon {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+}
+
+#home {
+    font-weight: 600;
+    font-size: normal;
+    margin-top: 43px;
+    margin-left: 40%;
+}
+
+#goal-icon {
+    position: absolute;
+    top: 213px;
+    left: 5px;
 }
