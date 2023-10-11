@@ -8,22 +8,21 @@
 
 nav {
     background: #efefef;
+    width: 17%;
 }
 
 .nav-con {
     margin-right: 1rem;
     margin-left: 1rem;
     display: flex;
+    position: absolute;
+    top: 26px;
+    left: 10px;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    text-align: center;
     font-weight: bold;
-    font-size: large;
-}
-
-#menu-home {
-    display: inline-block;
-    align-items: end;
+    font-size: 17.5px;
 }
 
 .menu-bottom {

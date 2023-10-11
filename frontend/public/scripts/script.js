@@ -20,21 +20,55 @@ function addTask() {
 
     var startTimeSpan = document.createElement('span');
     startTimeSpan.id = 'startTimeSpan'
-    startTimeSpan.textContent = 'Start :' + startTime;
+    startTimeSpan.textContent = 'Start : ' + startTime;
     task.appendChild(startTimeSpan);
 
     var endTimeSpan = document.createElement('span');
     endTimeSpan.id = 'endTimeSpan'
-    endTimeSpan.textContent = 'End :' + endTime;
+    endTimeSpan.textContent = 'End : ' + endTime;
     task.appendChild(endTimeSpan);
+
+    // Create start task button
+    var startButton = document.createElement('button');
+    startButton.className = 'start';
+    startButton.textContent = 'Start';
+    startButton.onclick = function () {
+        var progressBar = document.createElement('div');
+        progressBar.className = 'progress-container';
+
+        var progressBarChild = document.createElement('div');
+        progressBarChild.id = 'progress-bar';
+        progressBar.appendChild(progressBarChild);
+
+        task.appendChild(progressBar);
+
+        // Start countdown
+        var duration = (new Date(`2000-01-01 ${endTime}`) - new Date(`2000-01-01 ${startTime}`)) / 1000;
+        var progress = 0;
+        var interval = 1000; // 1 second interval
+
+        var timer = setInterval(function () {
+            progress += interval / (duration * 1000);
+            progressBarChild.style.width = `${progress * 100}%`;
+
+            if (progress >= 1) {
+                clearInterval(timer);
+                progressBarChild.innerHTML = "Task Complete!";
+            } else {
+                progressBarChild.innerHTML = `${Math.round(progress * 100)}%`;
+            }
+        }, interval);
+    };
 
     // Create delete button
     var deleteButton = document.createElement('button');
-    deleteButton.innerHTML = '<button class="delete">Delete</button>'
+    deleteButton.className = 'delete';
+    deleteButton.textContent = 'Delete';
     deleteButton.onclick = function () {
         taskList.removeChild(task);
     };
 
+    task.appendChild(startButton);
     task.appendChild(deleteButton);
     taskList.appendChild(task);
 
@@ -42,4 +76,5 @@ function addTask() {
     taskInput.value = '';
     document.getElementById('start').value = '';
     document.getElementById('end').value = '';
+
 }
