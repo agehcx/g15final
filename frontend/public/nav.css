@@ -75,8 +75,20 @@ a:hover {
     margin-left: 40%;
 }
 
-#goal-icon {
+#pmdr {
+    font-weight: 600;
+    font-size: normal;
+    margin-top: 43px;
+    margin-left: 40%;
+}
+
+#pmdr-icon {
     position: absolute;
-    top: 213px;
+    top: 210px;
     left: 5px;
+}
+
+#tomato {
+    height: 30px;
+    width: 30px;
 }
