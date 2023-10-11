@@ -1,8 +1,10 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  /* 
+  justify-content: center;
+  align-items: center; 
+  */
   height: 100vh;
   margin: 0;
   background-color: #f4f4f4;
@@ -14,17 +16,22 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1300px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1 {
   color: #333;
+  margin-bottom: 37px;
+  margin-top: 15px;
 }
 
 .task-form {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-#task-input{
+#task-input {
   padding: 10px;
   font-size: 19px;
   border: 1px solid #ccc;
@@ -32,7 +39,8 @@ h1 {
   margin-right: 10px;
 }
 
-#start, #end {
+#start-input,
+#end-input {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -64,7 +72,7 @@ ul {
   padding: 0;
 }
 
-li {
+.task-container {
   margin: 10px 0;
   margin-bottom: 10px;
   background-color: #f9f9f9;
@@ -102,21 +110,6 @@ li {
 
 .add-button:hover {
   background-color: #eed411;
-}
-
-.containerbar {
-  max-width:  1440px;
-  margin:  0 auto;
-}
-
-nav {
-  background: #817f7f;
-}
-
-.nav-con {
-  justify-content: space-between;
-  align-items: center;
-  height:  100px;
 }
 
 /* @media screen and (max-width: 360px) {

@@ -1,0 +1,55 @@
+/*CSS for navigate bar <nav> only -  organise for easier process*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #efefef;
+}
+
+.nav-con {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#menu-home {
+    display: inline-block;
+    align-items: end;
+}
+
+.menu-bottom {
+    display: flex;
+    position: absolute;
+    bottom: 26px;
+    left: 10px;
+}
+
+.menu li {
+    list-style: none;
+    align-items: end;
+    margin-left: 20px;
+}
+
+a {
+    color: #000000;
+    text-decoration: dashed;
+    font-weight: normal;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.containerbar {
+    max-width: 1440px;
+    margin: 0 auto;
+}

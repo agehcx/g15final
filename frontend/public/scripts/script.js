@@ -1,38 +1,42 @@
 function addTask() {
     var taskInput = document.getElementById('task-input');
     var taskText = taskInput.value.trim();
-    var startTime = document.getElementById('start').value;
-    var endTime = document.getElementById('end').value;
+    var startTime = document.getElementById('start-input').value;
+    var endTime = document.getElementById('end-input').value;
 
     if (taskText === '' || startTime == '' || endTime == '') {
-        alert("Input cannot be empty!"); 
+        alert("Input cannot be empty!");
         return;
     }
 
     var taskList = document.getElementById('task-list');
-    var li = document.createElement('li');
+    var task = document.createElement('li');
+    task.classList.add('task-container')
 
     var descriptionSpan = document.createElement('span');
+    descriptionSpan.id = 'descriptionSpan';
     descriptionSpan.textContent = taskText;
-    li.appendChild(descriptionSpan);
+    task.appendChild(descriptionSpan);
 
     var startTimeSpan = document.createElement('span');
-    startTimeSpan.textContent = 'Start :' +startTime;
-    li.appendChild(startTimeSpan);
+    startTimeSpan.id = 'startTimeSpan'
+    startTimeSpan.textContent = 'Start :' + startTime;
+    task.appendChild(startTimeSpan);
 
     var endTimeSpan = document.createElement('span');
+    endTimeSpan.id = 'endTimeSpan'
     endTimeSpan.textContent = 'End :' + endTime;
-    li.appendChild(endTimeSpan);
+    task.appendChild(endTimeSpan);
 
     // Create delete button
     var deleteButton = document.createElement('button');
     deleteButton.innerHTML = '<button class="delete">Delete</button>'
-    deleteButton.onclick = function() {
-        taskList.removeChild(li);
+    deleteButton.onclick = function () {
+        taskList.removeChild(task);
     };
 
-    li.appendChild(deleteButton);
-    taskList.appendChild(li);
+    task.appendChild(deleteButton);
+    taskList.appendChild(task);
 
     // Clear the input
     taskInput.value = '';

@@ -7,7 +7,7 @@
     <title>Workflow Management App | GROUP 15</title>
     <link rel="icon" href="f2cicon.png" sizes="1024x1024" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
@@ -15,11 +15,15 @@
         <div class="containerbar">
             <div class="nav">
                 <div class="nav-con">
-                    <ul><a href="#">Workflow Management          </a></ul>
+                    <ul>Workflow Management</ul>
+                </div>
+                <div class="icon-container">
+                    <img src="">
                 </div>
                 <ul class="menu">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Members</a></li>
+                    <li id="menu-home"><a href="#">Home</a></li> <!--navigate to main menu-->
+                    <li class="menu-bottom" id="menu-about-us"><a href="#">About Us</a></li>
+                    <!--navigate for members-->
                 </ul>
             </div>
         </div>
@@ -27,28 +31,15 @@
     <div class="container">
         <h1>Workflow Management App</h1>
         <div class="task-form">
-            <input type="text" id="task-input" placeholder="Enter a task...">
-            <input type="time" id="start" placeholder="Select Start">
-            <input type="time" id="end" placeholder="Select End">
-            <button class="add-button" onclick="addTask()">Add Task</button>
+            <input type="text" id="task-input" placeholder="Enter new task">
+            <input type="time" id="start-input" placeholder="Select Start">
+            <input type="time" id="end-input" placeholder="Select End">
+            <button class="add-button" onclick="addTask()">Add</button>
         </div>
-        <tr>
-            <td>Event</td>
-            <td>Start</td>
-            <td>End</td>
-        </tr>
         <ul id="task-list"></ul>
     </div>
     <script src="scripts/script.js"></script>
 
-    <!-- <div id="calendar"></div>
-      <div id="activity-form">
-          <h2>Add Activity</h2>
-          Date: <span id="selected-date"></span><br>
-          Activity: <input type="text" id="activity"><br>
-          <button onclick="addActivity()">Add</button>
-      </div>
-    <script src="scripts/calen.js"></script>   -->
 </body>
 
 </html>
