@@ -1,0 +1,40 @@
+/*pomodoro stylesheet*/
+
+.timer-container {
+    text-align: center;
+}
+
+#timer {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
+
+#resetButton {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#resetButton:hover {
+    background-color: #de0000;
+}

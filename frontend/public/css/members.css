@@ -1,0 +1,16 @@
+/*team members stylesheet*/
+
+.header {
+    margin-top: 50px;
+}
+
+#team-members {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#team-members li {
+    font-weight: 550;
+    font-size: 22.5px;
+    font-family: 'Prompt';
+}
