@@ -21,8 +21,8 @@
                     <ul>
                         <li id="home-icon"><img src="menu-icon.png"></li>
                         <li id="home"><a href="#">Your Task</a></li>
-                        <li id="goal-icon"><img src="goal-icon.png"></li>
-                        <li id="home"><a href="#">Goals</a></li>
+                        <li id="pmdr-icon"><img src="pmdr-icon.png" id="tomato"></li>
+                        <li id="pmdr"><a href="#">Pomodoro</a></li>
                     </ul>
                     <li class="menu-bottom" id="about-us"><a href="#">About Us</a></li>
                 </ul>
@@ -37,19 +37,33 @@
             <input type="time" id="end-input" placeholder="Select End">
             <button class="add-button" onclick="addTask()">Add</button>
         </div>
-        <h2>My Task</h2>
+        <h2>Today's Task</h2>
         <ul id="task-list"></ul>
         <script src="scripts/script.js"></script>
     </div>
     <div class="container" id="member-list" style="display: none;">
         <!-- Member details will be displayed here -->
         <div>
-            <h1 id="member-header">Team Members</h1>
+            <h1 class="header">Team Members</h1>
+            <ul id="team-members">
+                <li>ณัฐกมล มาลีหวล &emsp;&emsp;&emsp;&ensp;&nbsp;6633068021</li>
+                <li>พิชญาวรรษ อินทนนท์ &emsp;&ensp;&ensp;6633170221</li>
+                <li>สายเพชร รามวงศ์ &emsp;&emsp;&emsp;&ensp;6633258921</li>
+                <li>อามีน เจะบือราเฮง &emsp;&emsp;&emsp;&ensp;6633289321</li>
+            </ul>
         </div>
     </div>
-    <div class="container" id="goal" style="display: none;"></div>
-    <script src="scripts/switch.js"></script>
-
+    <div class="container" id="PMDRcountdown" style="display: none;">
+        <h1 class="header">Pomodoro Countdown</h1>
+        <div class="timer-container">
+            <div id="tomato"></div>
+            <h1 id="timer">25:00</h1>
+            <button id="startButton">Start</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </div>
 </body>
+<script src="scripts/switch.js"></script>
+<script src="scripts/pmdr.js"></script>
 
 </html>
