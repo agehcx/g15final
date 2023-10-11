@@ -36,6 +36,10 @@ function addTask() {
     startButton.className = 'start';
     startButton.textContent = 'Start';
     startButton.onclick = function () {
+        if(startButton.value == 1 ) {
+            alert('You already started the timer. You cannot initate it again.');
+            return
+        }
         var progressBar = document.createElement('div');
         progressBar.className = 'progress-container';
 
@@ -49,18 +53,23 @@ function addTask() {
         var duration = (new Date(`2000-01-01 ${endTime}`) - new Date(`2000-01-01 ${startTime}`)) / 1000;
         var progress = 0;
         var interval = 1000; // 1 second interval
-
+        if (startTime == endTime) {
+            progress = 1
+            progressBarChild.style.width = '100%';
+        }
         var timer = setInterval(function () {
             progress += interval / (duration * 1000);
             progressBarChild.style.width = `${progress * 100}%`;
-
+            
             if (progress >= 1) {
                 clearInterval(timer);
                 progressBarChild.innerHTML = "Task Complete!";
             } else {
                 progressBarChild.innerHTML = `${Math.round(progress * 100)}%`;
             }
+            progressBarChild.style.color = 'black'; // more readable
         }, interval);
+        startButton.value = '1'
     };
 
     // Create delete button

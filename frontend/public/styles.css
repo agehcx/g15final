@@ -20,8 +20,8 @@ body {
   background-color: rgb(251, 250, 250);
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 1440px;
-  max-width: 1440px;
+  width: 1920px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -149,7 +149,7 @@ ul {
   width: 0;
   height: 100%;
   background-color: #4caf50;
-  line-height: 15px;
+  line-height: 20px; /* add more height makes it easier to read */
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -236,23 +236,23 @@ ul {
 /* @media screen and (max-width: 360px) {
 
   .logo {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 
   .nav-con {
-      padding: 3rem 0;
-      flex-direction: column;
-      height: auto;
+    padding: 3rem 0;
+    flex-direction: column;
+    height: auto;
   }
 
   .menu {
-      text-align: center;
-      flex-direction: column;
+    text-align: center;
+    flex-direction: column;
   }
 
   .menu li {
-      padding: 2rem 0;
-  }
+    padding: 2rem 0;
+}
 
   .menu li:hover {
       background: #6ac67f;
